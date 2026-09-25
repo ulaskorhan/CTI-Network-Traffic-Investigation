@@ -6,7 +6,7 @@ This project is a practical Cyber Threat Intelligence (CTI) investigation of net
 
 The objective is to investigate network activity, identify potentially suspicious behavior, extract relevant indicators, map observed behavior to MITRE ATT&CK techniques where supported by evidence, and produce a structured technical intelligence report.
 
-The project is designed as a practical demonstration of network traffic analysis, threat intelligence analysis, evidence-based assessment, and technical reporting.
+The project demonstrates practical work with network traffic analysis, threat intelligence analysis, evidence based assessment, and technical reporting.
 
 ## Objectives
 
@@ -25,11 +25,11 @@ The investigation will focus on:
 
 ## Methodology
 
-The investigation will follow an evidence-based workflow:
+The investigation will follow an evidence based workflow:
 
 1. Dataset identification and documentation
 2. Initial network traffic overview
-3. Packet-level analysis
+3. Packet level analysis
 4. Structured network analysis
 5. IOC identification and enrichment
 6. Behavioral analysis
@@ -51,9 +51,6 @@ The project uses:
 - MITRE ATT&CK
 
 Additional tools or data sources may be introduced during the investigation where relevant.
-
-# CTI-Network-Traffic-Investigation
-A practical Cyber Threat Intelligence investigation of network traffic using PCAP, Wireshark, Zeek and Python.
 
 ## Repository Structure
 
@@ -80,6 +77,3 @@ CTI-Network-Traffic-Investigation/
 │   └── sources.md
 │
 └── README.md
-
-
-
