@@ -52,6 +52,9 @@ The project uses:
 
 Additional tools or data sources may be introduced during the investigation where relevant.
 
+# CTI-Network-Traffic-Investigation
+A practical Cyber Threat Intelligence investigation of network traffic using PCAP, Wireshark, Zeek and Python.
+
 ## Repository Structure
 
 ```text
@@ -79,5 +82,4 @@ CTI-Network-Traffic-Investigation/
 └── README.md
 
 
-# CTI-Network-Traffic-Investigation
-A practical Cyber Threat Intelligence investigation of network traffic using PCAP, Wireshark, Zeek and Python.
+
