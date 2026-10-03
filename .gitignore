@@ -1,0 +1,11 @@
+# Raw network capture data
+data/raw/*.pcap
+data/raw/*.pcapng
+data/raw/*.zip
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]

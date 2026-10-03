@@ -51,3 +51,68 @@ The investigation will use:
 - MITRE ATT&CK for behavioral mapping where supported by evidence
 
 Further observations will be added as the investigation progresses.
+
+## 6. Candidate Network Indicator: 41.108.179.197
+
+During the initial network analysis, repeated outbound TCP connection
+attempts from internal host `192.168.1.115` to `41.108.179.197` on
+destination port `1177/TCP` were identified.
+
+### Observations
+
+The observed traffic contains repeated TCP SYN packets originating from
+`192.168.1.115`. The source port changes between connection attempts,
+while the destination remains `41.108.179.197:1177`.
+
+The activity occurs repeatedly over an extended period of the capture.
+The observed attempts also show an approximately regular temporal pattern,
+with intervals in the region of several seconds between some attempts.
+
+This behavior is notable because it differs from the ordinary web
+traffic observed from the same internal host, where HTTP requests,
+responses, and application-layer data were observed.
+
+### External Enrichment
+
+The destination IP address was checked using VirusTotal. No useful
+reputation or related intelligence was identified for the IP address.
+
+Consequently, external reputation data does not currently provide
+independent evidence that the destination is malicious.
+
+### Related Network Evidence
+
+An ICMP Redirect involving `192.168.1.2` and `192.168.1.115` was also
+observed in connection with one of the packets. The ICMP message contained
+the original TCP connection attempt to `41.108.179.197:1177`.
+
+The ICMP Redirect was treated as routing-related network activity and
+was not considered evidence of malicious behavior.
+
+### Assessment
+
+The repeated connection attempts to `41.108.179.197:1177`, including
+their approximately periodic occurrence, represent an anomalous network
+behavior that warrants further investigation.
+
+At this stage, the available evidence is insufficient to independently
+confirm that `41.108.179.197` is malicious or that the traffic
+represents command and control activity.
+
+The IP is therefore treated as a **candidate network indicator** rather
+than a confirmed Indicator of Compromise.
+
+### Confidence
+
+**Moderate confidence** in the observation that repeated automated
+connection attempts occurred.
+
+**Low confidence** in any conclusion regarding the malicious nature or
+purpose of the traffic based solely on the currently available evidence.
+
+### Investigation Status
+
+The indicator will be retained for correlation with other network,
+DNS, host, and behavioral evidence during the remainder of the
+investigation.
+
